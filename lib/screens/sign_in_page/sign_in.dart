@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:organico/constant/color/color.dart';
 import 'package:organico/constant/sizeConfig/sizeConfig.dart';
+import 'package:organico/provider/mode_provider.dart';
+import 'package:organico/provider/show_password_provider.dart';
 import 'package:organico/widgets/Image_widgets/assets_image.dart';
 import 'package:organico/widgets/buttons/green_button.dart';
 import 'package:organico/widgets/textForums/number_forum.dart';
 import 'package:organico/widgets/paddings/paddings.dart';
 import 'package:organico/widgets/textForums/passwod_forum.dart';
 import 'package:organico/widgets/texts/texts.dart';
+import '../../widgets/buttons/icon_button.dart';
 import '../../widgets/buttons/text_button.dart';
+import 'package:provider/provider.dart';
 
 class SingInPage extends StatelessWidget {
   const SingInPage({Key? key}) : super(key: key);
@@ -56,23 +61,50 @@ class SingInPage extends StatelessWidget {
               myPaddingsymetric(
                 horizontal: 20,
                 vartical: 4,
-                child: passwordForm(),
+                child: passwordForm(
+                  isShow: context.watch<ShowPasswordProvider>().isShow,
+                  perfix: iconButton(
+                    iconColor: context.watch<ModeProvider>().iconColor,
+                    icon: const Icon(Icons.lock_outline),
+                    ontap: () {
+                      mode = !mode;
+                      context.read<ModeProvider>().setstate();
+                    },
+                  ),
+                  suffix: iconButton(
+                    iconColor: context.watch<ModeProvider>().iconColor,
+                    icon: Icon(context.watch<ShowPasswordProvider>().isShow
+                        ? Icons.remove_red_eye_outlined
+                        : Icons.visibility_off_outlined),
+                    ontap: () {
+                      context.read<ShowPasswordProvider>().showMe();
+                    },
+                  ),
+                ),
               ),
               myPaddingonly(
                 left: 266,
                 top: 20,
                 child: textBoldButton(
-                  text: "Forgot Password",
-                  size: 16,
-                  fontw: FontWeight.w700,
-                  color: const Color(0xFF2ECC71),
-                  ontap: () {},
-                ),
+                    text: "Forgot Password",
+                    size: 16,
+                    fontw: FontWeight.w700,
+                    color: const Color(0xFF2ECC71),
+                    ontap: () {
+                      Navigator.pushNamed(context, '/forget');
+                    },
+                    txtcolor: context.watch<ModeProvider>().textsColor),
               ),
               myPaddingonly(
                 top: 50,
                 left: 20,
-                child: greenButton(text: "Sign In"),
+                child: greenButton(
+                  color: context.watch<ModeProvider>().buttonColornegative,
+                  text: "Sign In",
+                  ontap: () {
+                    Navigator.pushNamed(context, '/signUp');
+                  },
+                ),
               ),
             ],
           ),

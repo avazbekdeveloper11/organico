@@ -6,7 +6,7 @@ import '../paddings/paddings.dart';
 import '../sizedboxes/sizedBox.dart';
 import '../texts/texts.dart';
 
-Widget numberForm() {
+Widget numberForm({String? hinttxt}) {
   return Container(
     width: getW(374),
     height: getH(48),
@@ -22,9 +22,13 @@ Widget numberForm() {
           const RotatedBox(quarterTurns: 1, child: Divider()),
           MySizeBox(
             width: 250,
-            height: 35,
-            child: TextFormField(
-              decoration: const InputDecoration(border: InputBorder.none),
+            height: 50,
+            child: myPaddingonly(
+              top: 22,
+              child: TextFormField(
+                decoration: InputDecoration(
+                    border: InputBorder.none, hintText: hinttxt),
+              ),
             ),
           ),
         ],
