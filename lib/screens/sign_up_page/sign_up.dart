@@ -26,14 +26,14 @@ class SignUpPage extends StatelessWidget {
                   iconButton(
                     icon: Icon(
                       Icons.arrow_back_ios,
-                      color: context.watch<ModeProvider>().iconColor,
+                      color: context.watch<ModeProvider>().grey,
                       size: getW(20),
                     ),
                     radius: 18,
                     ontap: () {
                       Navigator.pop(context);
                     },
-                    iconColor: context.watch<ModeProvider>().iconColor,
+                    iconColor: context.watch<ModeProvider>().grey,
                   ),
                   textBold(text: "New Registration"),
                 ],
@@ -105,7 +105,7 @@ class SignUpPage extends StatelessWidget {
                     textBoldButton(
                         text: "Terms of Use",
                         size: 16,
-                        txtcolor: context.watch<ModeProvider>().textsColor),
+                        txtcolor: context.watch<ModeProvider>().whiteBlack),
                     textBold(
                       text: " and ",
                       size: 16,
@@ -113,7 +113,7 @@ class SignUpPage extends StatelessWidget {
                     textBoldButton(
                         text: "Privacy Policy",
                         size: 16,
-                        txtcolor: context.watch<ModeProvider>().textsColor),
+                        txtcolor: context.watch<ModeProvider>().whiteBlack),
                   ],
                 ),
               ),
@@ -122,7 +122,7 @@ class SignUpPage extends StatelessWidget {
                 top: 32,
                 child: greenButton(
                   text: "Sign Up",
-                  color: context.watch<ModeProvider>().buttonColornegative,
+                  color: context.watch<ModeProvider>().whiteBlack,
                 ),
               ),
               textBoldPadding(top: 24, left: 185, text: "Or Use", size: 16),

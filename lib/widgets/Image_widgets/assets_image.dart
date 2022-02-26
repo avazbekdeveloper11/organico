@@ -1,3 +1,4 @@
 import 'package:flutter/material.dart';
 
-Widget assetImageFunk({String img = ''}) => Image(image: AssetImage(img));
+Image imageFunk({String img = ''}) => Image(image: AssetImage(img));
+AssetImage assetImageProvider({String img = ''}) =>  AssetImage(img);

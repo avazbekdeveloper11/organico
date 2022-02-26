@@ -4,7 +4,6 @@ import 'package:organico/widgets/buttons/green_button.dart';
 import 'package:organico/widgets/paddings/paddings.dart';
 import 'package:organico/widgets/textForums/number_forum.dart';
 import 'package:provider/provider.dart';
-
 import '../../constant/sizeConfig/sizeConfig.dart';
 import '../../provider/mode_provider.dart';
 import '../../widgets/buttons/icon_button.dart';
@@ -25,21 +24,21 @@ class ForgetPage extends StatelessWidget {
               iconButton(
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: context.watch<ModeProvider>().iconColor,
+                  color: context.watch<ModeProvider>().grey,
                   size: getW(20),
                 ),
                 radius: 18,
                 ontap: () {
                   Navigator.pop(context);
                 },
-                iconColor: context.watch<ModeProvider>().iconColor,
+                iconColor: context.watch<ModeProvider>().grey,
               ),
               textBold(text: "Forgot Password"),
             ],
           ),
           SizedBox(
             height: getH(345),
-            child: assetImageFunk(img: "assets/images/Forgot Illustration.png"),
+            child: imageFunk(img: "assets/images/Forgot Illustration.png"),
           ),
           myPaddingonly(
             top: 70,
@@ -53,7 +52,7 @@ class ForgetPage extends StatelessWidget {
               text:
                   "We need to verify you. We will send you a one-time authorization code.",
               fontw: FontWeight.w400,
-              coll: const Color(0xFF92929D),
+              color: const Color(0xFF92929D),
             ),
           ),
           myPaddingsymetric(
@@ -66,7 +65,7 @@ class ForgetPage extends StatelessWidget {
             right: 20,
             top: 79,
             child: greenButton(
-                text: "Next", color: context.watch<ModeProvider>().textsColor,
+                text: "Next", color: context.watch<ModeProvider>().whiteBlack,
                 ontap: (){Navigator.pushNamed(context, "/smscode");}),
           ),
         ],

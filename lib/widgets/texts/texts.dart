@@ -6,12 +6,12 @@ Text textBold(
         {required String text,
         double size = 18,
         fontw = FontWeight.w600,
-        color,coll}) =>
+        color}) =>
     Text(text,
         style: TextStyle(
           fontSize: getW(size),
-          fontWeight: FontWeight.w600,
-          color: color ?? coll,
+          fontWeight: fontw,
+          color: color,
         ));
 
 Padding textBoldPadding({

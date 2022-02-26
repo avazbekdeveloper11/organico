@@ -24,14 +24,14 @@ class ResetPassword extends StatelessWidget {
               iconButton(
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: context.watch<ModeProvider>().iconColor,
+                  color: context.watch<ModeProvider>().grey,
                   size: getW(20),
                 ),
                 radius: 18,
                 ontap: () {
                   Navigator.pop(context);
                 },
-                iconColor: context.watch<ModeProvider>().iconColor,
+                iconColor: context.watch<ModeProvider>().grey,
               ),
               textBold(text: "Reset Password"),
             ],
@@ -42,7 +42,7 @@ class ResetPassword extends StatelessWidget {
             child: textBold(
               text:
                   "Please fill in the field below to reset your current password.",
-              coll: const Color(0xFF92929D),
+              color: const Color(0xFF92929D),
               fontw: FontWeight.w400,
               size: 16,
             ),
@@ -51,7 +51,7 @@ class ResetPassword extends StatelessWidget {
             left: 20,
             child: textBold(
               text: "New Password",
-              coll: const Color(0xFF92929D),
+              color: const Color(0xFF92929D),
             ),
           ),
           myPaddingsymetric(
@@ -60,7 +60,7 @@ class ResetPassword extends StatelessWidget {
             child: passwordForm(
               txt: "New Password",
               suffix: iconButton(
-                iconColor: context.watch<ModeProvider>().iconColor,
+                iconColor: context.watch<ModeProvider>().grey,
                 icon: Icon(context.watch<ShowPasswordProvider>().showpass
                     ? Icons.remove_red_eye_outlined
                     : Icons.visibility_off_outlined),
@@ -75,7 +75,7 @@ class ResetPassword extends StatelessWidget {
             left: 20,
             child: textBold(
               text: "New Password Confirmation",
-              coll: const Color(0xFF92929D),
+              color: const Color(0xFF92929D),
             ),
           ),
           myPaddingsymetric(
@@ -84,7 +84,7 @@ class ResetPassword extends StatelessWidget {
             child: passwordForm(
               txt: "New Password Confirmation",
               suffix: iconButton(
-                iconColor: context.watch<ModeProvider>().iconColor,
+                iconColor: context.watch<ModeProvider>().grey,
                 icon: Icon(context.watch<ShowPasswordProvider>().showconf
                     ? Icons.remove_red_eye_outlined
                     : Icons.visibility_off_outlined),
@@ -101,7 +101,7 @@ class ResetPassword extends StatelessWidget {
             top: 55,
             child: greenButton(
               text: "Reset password",
-              color: context.watch<ModeProvider>().textsColor,
+              color: context.watch<ModeProvider>().whiteBlack,
               ontap: () {
                 Navigator.pushNamed(context, "/homePage");
               },

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ModeProvider extends ChangeNotifier {
-  bool Mode = true;
-  Color textsColor = const Color(0xFFFFFFFF);
-  Color buttontextColor = const Color(0xFFFFFFFF);
-  Color iconColor =const Color(0xFF92929D);
-  Color buttonColornegative = const Color(0xFFFFFFFF);
+  bool mode = true;
+  Color grey = const Color(0xFF92929D);
+  Color green = const Color(0xFF2ECC71);
+  Color whiteBlack = const Color(0xFF171725);
+  Color blackWhite = const Color(0xFF171725);
+  Color forumColor = const Color.fromARGB(255, 232, 232, 241);
 
   setstate() {
-    textsColor = !Mode ? const Color(0xFFFFFFFF) : const Color(0xFF171725);
-    buttontextColor = !Mode ? const Color(0xFFFFFFFF) : const Color(0xFF171725);
-    iconColor = Mode ? const Color(0xFFFFFFFF) : const Color(0xFF92929D);
-    buttonColornegative =
-        Mode ? const Color(0xFFFFFFFF) : const Color(0xFF171725);
-    Mode = !Mode;
+    //
+    mode = !mode;
+    whiteBlack = mode ? const Color(0xFFFFFFFF) : const Color(0xFF171725);
+    blackWhite = mode ? const Color(0xFF171725) : const Color(0xFFFFFFFF);
+    forumColor = !mode
+        ? const Color.fromARGB(255, 73, 74, 77)
+        : const Color.fromARGB(192, 232, 232, 241);
     notifyListeners();
   }
 }

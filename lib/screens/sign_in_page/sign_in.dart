@@ -32,7 +32,7 @@ class SingInPage extends StatelessWidget {
                 child: SizedBox(
                   height: getH(318),
                   width: getW(349),
-                  child: assetImageFunk(img: "assets/images/WelcomeImage.png"),
+                  child: imageFunk(img: "assets/images/WelcomeImage.png"),
                 ),
               ),
               textBoldPadding(
@@ -64,7 +64,7 @@ class SingInPage extends StatelessWidget {
                 child: passwordForm(
                   isShow: context.watch<ShowPasswordProvider>().isShow,
                   perfix: iconButton(
-                    iconColor: context.watch<ModeProvider>().iconColor,
+                    iconColor: context.watch<ModeProvider>().grey,
                     icon: const Icon(Icons.lock_outline),
                     ontap: () {
                       mode = !mode;
@@ -72,7 +72,7 @@ class SingInPage extends StatelessWidget {
                     },
                   ),
                   suffix: iconButton(
-                    iconColor: context.watch<ModeProvider>().iconColor,
+                    iconColor: context.watch<ModeProvider>().grey,
                     icon: Icon(context.watch<ShowPasswordProvider>().isShow
                         ? Icons.remove_red_eye_outlined
                         : Icons.visibility_off_outlined),
@@ -93,14 +93,25 @@ class SingInPage extends StatelessWidget {
                     ontap: () {
                       Navigator.pushNamed(context, '/forget');
                     },
-                    txtcolor: context.watch<ModeProvider>().textsColor),
+                    txtcolor: context.watch<ModeProvider>().green),
               ),
               myPaddingonly(
-                top: 50,
+                top: 30,
                 left: 20,
                 child: greenButton(
-                  color: context.watch<ModeProvider>().buttonColornegative,
+                  color: context.watch<ModeProvider>().whiteBlack,
                   text: "Sign In",
+                  ontap: () {
+                    Navigator.pushNamed(context, '/homePage');
+                  },
+                ),
+              ),
+              myPaddingonly(
+                top: 10,
+                left: 20,
+                child: greenButton(
+                  color: context.watch<ModeProvider>().whiteBlack,
+                  text: "Sign Up",
                   ontap: () {
                     Navigator.pushNamed(context, '/signUp');
                   },

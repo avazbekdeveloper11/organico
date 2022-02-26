@@ -24,14 +24,14 @@ class SmsCode extends StatelessWidget {
                 iconButton(
                   icon: Icon(
                     Icons.arrow_back_ios,
-                    color: context.watch<ModeProvider>().iconColor,
+                    color: context.watch<ModeProvider>().grey,
                     size: getW(20),
                   ),
                   radius: 18,
                   ontap: () {
                     Navigator.pop(context);
                   },
-                  iconColor: context.watch<ModeProvider>().iconColor,
+                  iconColor: context.watch<ModeProvider>().grey,
                 ),
                 textBold(text: "OTAC Number"),
               ],
@@ -47,7 +47,7 @@ class SmsCode extends StatelessWidget {
             textBold(
               text: "We have sent SMS to:",
               size: 16,
-              coll: const Color(0xFF92929D),
+              color: const Color(0xFF92929D),
             ),
             textBold(
               text: "+998992305103",
@@ -58,7 +58,7 @@ class SmsCode extends StatelessWidget {
               child: passwordForm(
                 txt: "6 Digit Code",
                 suffix: iconButton(
-                  iconColor: context.watch<ModeProvider>().iconColor,
+                  iconColor: context.watch<ModeProvider>().grey,
                   icon: Icon(context.watch<ShowPasswordProvider>().isShowcode
                       ? Icons.remove_red_eye_outlined
                       : Icons.visibility_off_outlined),
@@ -83,7 +83,7 @@ class SmsCode extends StatelessWidget {
               top: 40,
               child: greenButton(
                 text: "Next",
-                color: context.watch<ModeProvider>().textsColor,
+                color: context.watch<ModeProvider>().whiteBlack,
                 ontap: () {
                   Navigator.pushNamed(context, "/resetPassword");
                 },

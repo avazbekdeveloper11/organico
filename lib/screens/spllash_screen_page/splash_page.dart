@@ -23,7 +23,7 @@ class SplashPage extends StatelessWidget {
             child: MySizeBox(
               height: 143,
               width: double.infinity,
-              child: assetImageFunk(img: 'assets/logo/Logo.png'),
+              child: imageFunk(img: 'assets/logo/Logo.png'),
             ),
           ),
           textBold(text: "Organico", size: 24)
