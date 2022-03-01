@@ -4,7 +4,6 @@ import 'package:organico/provider/mode_provider.dart';
 import 'package:organico/widgets/Image_widgets/assets_image.dart';
 import 'package:organico/widgets/buttons/icon_button.dart';
 import 'package:organico/widgets/catigory_And_Button/catigory_and_button.dart';
-import 'package:organico/widgets/location/location%20_page.dart';
 import 'package:organico/widgets/paddings/paddings.dart';
 import 'package:organico/widgets/textForums/passwod_forum.dart';
 import 'package:organico/widgets/texts/texts.dart';
@@ -30,11 +29,9 @@ class HomePage extends StatelessWidget {
               size: 16,
             ),
             textBold(
-              text: LocationData().adress,
+              text: "Adress",
               size: 20,
-              color: LocationData().adress == "no internet !"
-                  ? Colors.red
-                  : context.watch<ModeProvider>().whiteBlack,
+              color: context.watch<ModeProvider>().whiteBlack,
             ),
           ],
         ),
@@ -102,7 +99,8 @@ class HomePage extends StatelessWidget {
                   color: context.watch<ModeProvider>().blackWhite,
                 ),
               ),
-              bigCardBestSelling(context)
+              bigCardBestSelling(context),
+              
             ],
           ),
         ),

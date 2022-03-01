@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:organico/provider/bottomnavigationbarProvider/bottomProvider.dart';
 import 'package:organico/provider/buttonproviders/checkbox_provider.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:organico/provider/show_password_provider.dart';
 import 'package:organico/router/router.dart';
 import 'package:provider/provider.dart';
-
-import 'constant/color/color.dart';
 
 void main() {
   runApp(
@@ -14,6 +13,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => ShowPasswordProvider()),
         ChangeNotifierProvider(create: (_) => ModeProvider()),
         ChangeNotifierProvider(create: (_) => CheckBoxProvider()),
+        ChangeNotifierProvider(create: (_) => BottomBarProvider()),
       ],
       child: MyApp(),
     ),

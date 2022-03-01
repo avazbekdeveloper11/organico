@@ -7,6 +7,7 @@ import 'package:organico/screens/sign_in_page/sign_in.dart';
 import 'package:organico/screens/sign_up_page/sign_up.dart';
 import 'package:organico/screens/sms_codee/sms_code.dart';
 import 'package:organico/screens/spllash_screen_page/splash_page.dart';
+import 'package:organico/widgets/bottom_navigation_bar/nav_bar.dart';
 
 class RouterGenerator {
   Route? generateRoute(RouteSettings settings) {
@@ -26,7 +27,7 @@ class RouterGenerator {
       case '/resetPassword':
         return MaterialPageRoute(builder: (_) => const ResetPassword());
       case '/homePage':
-        return MaterialPageRoute(builder: (_) => const HomePage());
+        return MaterialPageRoute(builder: (_) => const BottomNavbar());
       case '/search':
         return MaterialPageRoute(builder: (_) => const SearchPage());
     }
