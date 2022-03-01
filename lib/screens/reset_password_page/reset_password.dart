@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:organico/widgets/paddings/paddings.dart';
 import 'package:provider/provider.dart';
-import '../../constant/sizeConfig/sizeConfig.dart';
+import '../../core/constant/sizeConfig/sizeConfig.dart';
+import '../../core/widgets/buttons/green_button.dart';
+import '../../core/widgets/buttons/icon_button.dart';
+import '../../core/widgets/paddings/paddings.dart';
+import '../../core/widgets/textForums/passwod_forum.dart';
+import '../../core/widgets/texts/texts.dart';
 import '../../provider/mode_provider.dart';
 import '../../provider/show_password_provider.dart';
-import '../../widgets/buttons/green_button.dart';
-import '../../widgets/buttons/icon_button.dart';
-import '../../widgets/textForums/passwod_forum.dart';
-import '../../widgets/texts/texts.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);

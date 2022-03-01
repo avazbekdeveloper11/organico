@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:organico/constant/sizeConfig/sizeConfig.dart';
+import 'package:organico/model/data.dart';
+import 'package:organico/provider/dropdownProvider/dropdownProvider.dart';
 import 'package:organico/provider/mode_provider.dart';
-import 'package:organico/widgets/Image_widgets/assets_image.dart';
-import 'package:organico/widgets/buttons/icon_button.dart';
-import 'package:organico/widgets/catigory_And_Button/catigory_and_button.dart';
-import 'package:organico/widgets/paddings/paddings.dart';
-import 'package:organico/widgets/textForums/passwod_forum.dart';
-import 'package:organico/widgets/texts/texts.dart';
 import 'package:provider/provider.dart';
-import '../../widgets/cards/cards.dart';
+import '../../core/constant/sizeConfig/sizeConfig.dart';
+import '../../core/widgets/Image_widgets/assets_image.dart';
+import '../../core/widgets/buttons/icon_button.dart';
+import '../../core/widgets/cards/cards.dart';
+import '../../core/widgets/catigory_And_Button/catigory_and_button.dart';
+import '../../core/widgets/paddings/paddings.dart';
+import '../../core/widgets/sizedboxx/sizedbox_widget.dart';
+import '../../core/widgets/textForums/passwod_forum.dart';
+import '../../core/widgets/texts/texts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -28,10 +32,20 @@ class HomePage extends StatelessWidget {
               color: const Color(0xFF696974),
               size: 16,
             ),
-            textBold(
-              text: "Adress",
-              size: 20,
-              color: context.watch<ModeProvider>().whiteBlack,
+            DropdownButton(
+              isDense: true,
+              menuMaxHeight: getW(230),
+              underline: sizedbox(""),
+              value: context.watch<DropdownProvider>().valuee,
+              items: List<DropdownMenuItem<String>>.generate(
+                12,
+                (index) => DropdownMenuItem(
+                  value: regionNames[index],
+                  child: Center(child: Text(regionNames[index])),
+                ),
+              ),
+              onChanged: (v) =>
+                  context.read<DropdownProvider>().changeRegion(v),
             ),
           ],
         ),
@@ -88,7 +102,7 @@ class HomePage extends StatelessWidget {
                   color: context.watch<ModeProvider>().blackWhite,
                 ),
               ),
-              cardCatigory(),
+              cardCatigory(context),
               myPaddingonly(
                 left: 20,
                 right: 20,
@@ -100,7 +114,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               bigCardBestSelling(context),
-              
             ],
           ),
         ),

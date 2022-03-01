@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:organico/constant/sizeConfig/sizeConfig.dart';
 import 'package:organico/screens/spllash_screen_page/component/navigator_after_page.dart';
-import 'package:organico/widgets/Image_widgets/assets_image.dart';
-import 'package:organico/widgets/paddings/paddings.dart';
-import 'package:organico/widgets/sizedboxes/sizedBox.dart';
-import 'package:organico/widgets/texts/texts.dart';
+import '../../core/constant/sizeConfig/sizeConfig.dart';
+import '../../core/widgets/Image_widgets/assets_image.dart';
+import '../../core/widgets/paddings/paddings.dart';
+import '../../core/widgets/sizedboxes/sizedBox.dart';
+import '../../core/widgets/texts/texts.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);

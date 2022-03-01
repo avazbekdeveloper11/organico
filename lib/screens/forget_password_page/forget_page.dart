@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:organico/widgets/Image_widgets/assets_image.dart';
-import 'package:organico/widgets/buttons/green_button.dart';
-import 'package:organico/widgets/paddings/paddings.dart';
-import 'package:organico/widgets/textForums/number_forum.dart';
 import 'package:provider/provider.dart';
-import '../../constant/sizeConfig/sizeConfig.dart';
+import '../../core/constant/sizeConfig/sizeConfig.dart';
+import '../../core/widgets/Image_widgets/assets_image.dart';
+import '../../core/widgets/buttons/green_button.dart';
+import '../../core/widgets/buttons/icon_button.dart';
+import '../../core/widgets/paddings/paddings.dart';
+import '../../core/widgets/textForums/number_forum.dart';
+import '../../core/widgets/texts/texts.dart';
 import '../../provider/mode_provider.dart';
-import '../../widgets/buttons/icon_button.dart';
-import '../../widgets/texts/texts.dart';
 
 class ForgetPage extends StatelessWidget {
   const ForgetPage({Key? key}) : super(key: key);

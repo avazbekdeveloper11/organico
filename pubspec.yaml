@@ -38,6 +38,7 @@ dependencies:
   geocoding: ^2.0.2
   geolocator: ^8.2.0
   flutter_svg: ^1.0.3
+  readmore: ^2.1.0
 
 dev_dependencies:
   flutter_test:

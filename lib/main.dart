@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:organico/provider/bottomnavigationbarProvider/bottomProvider.dart';
 import 'package:organico/provider/buttonproviders/checkbox_provider.dart';
+import 'package:organico/provider/count_product_provider/count_provider.dart';
+import 'package:organico/provider/dropdownProvider/dropdownProvider.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:organico/provider/show_password_provider.dart';
 import 'package:organico/router/router.dart';
@@ -14,6 +16,8 @@ void main() {
         ChangeNotifierProvider(create: (_) => ModeProvider()),
         ChangeNotifierProvider(create: (_) => CheckBoxProvider()),
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
+        ChangeNotifierProvider(create: (_) => DropdownProvider()),
+        ChangeNotifierProvider(create: (_) => CountProvider()),
       ],
       child: MyApp(),
     ),
