@@ -21,6 +21,8 @@ SizedBox bigCardBestSelling(BuildContext context) {
           children: [
             sizedbox(__),
             InkWell(
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () => Navigator.pushNamed(context, '/detail'),
               child: Stack(
                 children: [

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:organico/core/widgets/sizedboxx/sizedbox_widget.dart';
 import 'package:organico/provider/count_product_provider/count_provider.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:provider/provider.dart';
@@ -36,9 +35,13 @@ class DetailPage extends StatelessWidget {
                       children: [
                         iconButton(
                           icon: const Icon(Icons.arrow_back_ios_new_outlined),
+                          ontap: () {
+                            Navigator.pop(context);
+                          },
                         ),
                         iconButton(
                           icon: const Icon(Icons.favorite_border),
+                          ontap: () {},
                         ),
                       ],
                     ),
@@ -114,7 +117,8 @@ class DetailPage extends StatelessWidget {
                       child: SizedBox(
                         width: getW(200),
                         child: textBold(
-                          text: "\$4.99 /Kg",
+                          text:
+                              "\$${(4.99 * context.watch<CountProvider>().noun).toStringAsFixed(2)}/Kg",
                           size: 24,
                           color: context.watch<ModeProvider>().blackWhite,
                         ),
