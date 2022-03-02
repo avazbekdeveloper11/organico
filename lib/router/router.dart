@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:organico/screens/cart_page/cart_page.dart';
 import 'package:organico/screens/detail/detail_page.dart';
+import 'package:organico/screens/edit_profile_page/edit_profie.dart';
 import 'package:organico/screens/explore/explore_page.dart';
 import 'package:organico/screens/forget_password_page/forget_page.dart';
+import 'package:organico/screens/order_page/order_page.dart';
 import 'package:organico/screens/profile_page/profile_page.dart';
 import 'package:organico/screens/reset_password_page/reset_password.dart';
 import 'package:organico/screens/search_page/search_page.dart';
@@ -42,6 +44,10 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const ProfilePage());
       case '/detail':
         return MaterialPageRoute(builder: (_) => const DetailPage());
+      case '/editProfile':
+        return MaterialPageRoute(builder: (_) => const EditProfilePage());
+      case '/myOrder':
+        return MaterialPageRoute(builder: (_) => const OrderPage());
     }
     return null;
   }

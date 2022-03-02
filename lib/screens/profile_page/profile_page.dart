@@ -3,8 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:organico/core/constant/sizeConfig/sizeConfig.dart';
 import 'package:organico/core/widgets/Image_widgets/assets_image.dart';
 import 'package:organico/core/widgets/buttons/icon_button.dart';
+import 'package:organico/core/widgets/circularAvatar/circular_avatar.dart';
 import 'package:organico/core/widgets/paddings/paddings.dart';
 import 'package:organico/provider/mode_provider.dart';
+import 'package:organico/screens/profile_page/components/components.dart';
 import 'package:provider/provider.dart';
 import '../../core/widgets/texts/texts.dart';
 
@@ -33,16 +35,7 @@ class ProfilePage extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            Center(
-              child: InkWell(
-                child: CircleAvatar(
-                  radius: getW(80),
-                  backgroundColor: Colors.grey.shade400,
-                  backgroundImage:
-                      assetImageProvider(img: "assets/icon/add_image.png"),
-                ),
-              ),
-            ),
+            Center(child: circileAvatar(context)),
             myPaddingonly(
               top: 24,
               bottom: 8,
@@ -62,18 +55,20 @@ class ProfilePage extends StatelessWidget {
               bottom: 20,
               child: SizedBox(
                 width: double.infinity,
-                height: getH(544),
+                height: getH(550),
                 child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (_, __) {
                     return ListTile(
+                      onTap: () => Navigator.pushNamed(
+                          context, profilePages[__]['path']),
                       leading: SizedBox(
                         height: getW(44),
                         width: getW(44),
                         child: imageFunk(img: "assets/logo/cupon.png"),
                       ),
                       title: textBold(
-                          text: "Edit Profile",
+                          text: profilePages[__]['name'],
                           color: context.watch<ModeProvider>().blackWhite,
                           size: 16),
                       trailing: iconButton(
@@ -87,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                   itemCount: 8,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

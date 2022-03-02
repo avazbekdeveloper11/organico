@@ -11,12 +11,14 @@ class BottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PagesCall().pages[context.watch<BottomBarProvider>().selectedIndex],
+      body: pages[context.watch<BottomBarProvider>().selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
         currentIndex: context.watch<BottomBarProvider>().selectedIndex,
         onTap: (v) => context.read<BottomBarProvider>().changeIndex(v),
         selectedItemColor: Colors.green,
+        selectedFontSize: 12,
         unselectedItemColor: Colors.grey,
         items: List<BottomNavigationBarItem>.generate(
           4,

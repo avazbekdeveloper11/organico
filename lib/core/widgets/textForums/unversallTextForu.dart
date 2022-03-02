@@ -8,7 +8,8 @@ unversallTextForm(
   return Container(
     height: getH(52),
     width: getW(374),
-    child: myPaddingsymetric(horizontal: 20,vartical: 4, child: textforum(hintText)),
+    child: myPaddingsymetric(
+        horizontal: 20, vartical: 4, child: textforum(hintText)),
     decoration: BoxDecoration(
       borderRadius: radius(100),
       border: Border.all(color: borderColor),
@@ -18,6 +19,7 @@ unversallTextForm(
 
 TextFormField textforum(String hint) {
   return TextFormField(
+    maxLines: 3,
     decoration: InputDecoration(
       border: InputBorder.none,
       hintText: hint,
