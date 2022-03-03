@@ -11,32 +11,32 @@ List profilePages = [
   },
   {
     "name": "My Wishlist",
-    "path": "/myOrder",
+    "path": "/wishlist",
     "img": "assets/icon/message.svg",
   },
   {
     "name": "My Address",
-    "path": "/myOrder",
+    "path": "/adress",
     "img": "assets/icon/message.svg",
   },
   {
     "name": "Payment Method",
-    "path": "/myOrder",
+    "path": "/payment",
     "img": "assets/icon/message.svg",
   },
   {
     "name": "Customer Service",
-    "path": "/myOrder",
+    "path": "/customer",
     "img": "assets/icon/message.svg",
   },
   {
     "name": "Change Password",
-    "path": "/myOrder",
+    "path": "/changePassword",
     "img": "assets/icon/message.svg",
   },
   {
     "name": "Logout",
-    "path": "/myOrder",
+    "path": "/log",
     "img": "assets/icon/message.svg",
   },
 ];

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:organico/core/constant/sizeConfig/sizeConfig.dart';
+import 'package:organico/core/widgets/app_bar_widget/app_bar.dart';
 import 'package:organico/core/widgets/borderRadius/border_radius.dart';
 import 'package:organico/core/widgets/buttons/green_button.dart';
 import 'package:organico/core/widgets/buttons/icon_button.dart';
@@ -17,10 +18,9 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
+      appBar: appbarWidgetim(
+        context,
+        text: "Edit Profile",
         leading: iconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
@@ -28,10 +28,6 @@ class EditProfilePage extends StatelessWidget {
             color: context.watch<ModeProvider>().blackWhite,
           ),
           ontap: () => Navigator.pop(context),
-        ),
-        title: textBold(
-          text: "Edit Profile",
-          color: context.watch<ModeProvider>().blackWhite,
         ),
       ),
       body: SingleChildScrollView(
@@ -58,7 +54,7 @@ class EditProfilePage extends StatelessWidget {
                 child: textBold(
                     text: "Phone", color: context.watch<ModeProvider>().grey),
               ),
-              numberForm(hinttxt: "Your phone number"),
+              numberForm(hinttxt: "99 123 45 67"),
               myPaddingonly(
                 top: 8,
                 bottom: 10,

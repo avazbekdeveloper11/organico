@@ -27,8 +27,10 @@ class ProfilePage extends StatelessWidget {
         ),
         actions: [
           iconButton(
-            icon: SvgPicture.asset('assets/icon/notification.svg'),
-          )
+              icon: SvgPicture.asset('assets/icon/notification.svg'),
+              ontap: () {
+                Navigator.pushNamed(context, "/notificationSettings");
+              })
         ],
       ),
       body: SingleChildScrollView(
