@@ -9,7 +9,6 @@ class ModeProvider extends ChangeNotifier {
   Color forumColor = const Color.fromARGB(255, 232, 232, 241);
 
   setstate() {
-    //
     mode = !mode;
     whiteBlack = !mode ? const Color(0xFFFFFFFF) : const Color(0xFF171725);
     blackWhite = mode ? const Color(0xFF171725) : const Color(0xFFFFFFFF);

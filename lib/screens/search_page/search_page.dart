@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/widgets/texts/texts.dart';
+import 'package:organico/core/widgets/texts/texts.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);

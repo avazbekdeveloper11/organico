@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:organico/core/constant/sizeConfig/sizeConfig.dart';
+import 'package:organico/core/widgets/Image_widgets/assets_image.dart';
+import 'package:organico/core/widgets/buttons/green_button.dart';
+import 'package:organico/core/widgets/buttons/icon_button.dart';
+import 'package:organico/core/widgets/listtile/listtile.dart';
+import 'package:organico/core/widgets/paddings/paddings.dart';
+import 'package:organico/core/widgets/texts/texts.dart';
 import 'package:organico/provider/count_product_provider/count_provider.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
-import '../../core/constant/sizeConfig/sizeConfig.dart';
-import '../../core/widgets/Image_widgets/assets_image.dart';
-import '../../core/widgets/buttons/green_button.dart';
-import '../../core/widgets/buttons/icon_button.dart';
-import '../../core/widgets/listtile/listtile.dart';
-import '../../core/widgets/paddings/paddings.dart';
-import '../../core/widgets/texts/texts.dart';
-
 class DetailPage extends StatelessWidget {
   const DetailPage({Key? key}) : super(key: key);
 

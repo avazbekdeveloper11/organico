@@ -5,10 +5,10 @@ import 'package:organico/core/widgets/Image_widgets/assets_image.dart';
 import 'package:organico/core/widgets/buttons/icon_button.dart';
 import 'package:organico/core/widgets/circularAvatar/circular_avatar.dart';
 import 'package:organico/core/widgets/paddings/paddings.dart';
+import 'package:organico/core/widgets/texts/texts.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:organico/screens/profile_page/components/components.dart';
 import 'package:provider/provider.dart';
-import '../../core/widgets/texts/texts.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);

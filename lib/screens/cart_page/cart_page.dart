@@ -4,10 +4,10 @@ import 'package:organico/core/widgets/Image_widgets/assets_image.dart';
 import 'package:organico/core/widgets/borderRadius/border_radius.dart';
 import 'package:organico/core/widgets/buttons/green_button.dart';
 import 'package:organico/core/widgets/paddings/paddings.dart';
+import 'package:organico/core/widgets/texts/texts.dart';
 import 'package:organico/provider/count_product_provider/count_provider.dart';
 import 'package:organico/provider/mode_provider.dart';
 import 'package:provider/provider.dart';
-import '../../core/widgets/texts/texts.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);

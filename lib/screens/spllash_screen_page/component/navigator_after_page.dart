@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:organico/core/widgets/bottom_navigation_bar/companents/companents.dart';
 
-import '../../../core/widgets/bottom_navigation_bar/companents/companents.dart';
 
 class NavigatorPage {
   navigator(context) {
