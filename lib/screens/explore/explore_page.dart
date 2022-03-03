@@ -125,6 +125,7 @@ class ExplorePage extends StatelessWidget {
             ),
           );
         },
+        itemCount: 8,
       ),
     );
   }

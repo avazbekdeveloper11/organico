@@ -52,7 +52,7 @@ class RouterGenerator {
       case '/editProfile':
         return MaterialPageRoute(builder: (_) => const EditProfilePage());
       case '/myOrder':
-        return MaterialPageRoute(builder: (_) => const OrderPage());
+        return MaterialPageRoute(builder: (_) => OrderPage());
       case '/wishlist':
         return MaterialPageRoute(builder: (_) => const WishListPage());
       case '/adress':

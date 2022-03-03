@@ -21,14 +21,6 @@ class EditProfilePage extends StatelessWidget {
       appBar: appbarWidgetim(
         context,
         text: "Edit Profile",
-        leading: iconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            size: getW(20),
-            color: context.watch<ModeProvider>().blackWhite,
-          ),
-          ontap: () => Navigator.pop(context),
-        ),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
